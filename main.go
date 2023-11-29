@@ -27,10 +27,11 @@ type IDE struct {
 	Editor   string
 	Debugger string
 	Build    string
+	Name 	 string
 }
 
 func (ide IDE) getAllFunctionality() []string {
-	s := []string{ide.Editor, ide.Debugger, ide.Build}
+	s := []string{ide.Editor, ide.Debugger, ide.Build, ide.Name}
 
 	return s
 }
