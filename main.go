@@ -13,8 +13,12 @@ func handle(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+
+	log.Print("Trying to start server")
+
 	http.HandleFunc("/", handle)
 	if err := http.ListenAndServe(":8000", nil); err != nil {
 		log.Fatal(err)
 	}
+
 }
