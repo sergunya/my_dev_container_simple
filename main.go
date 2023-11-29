@@ -11,10 +11,19 @@ import (
 
 func handle(w http.ResponseWriter, r *http.Request) {
 	os := runtime.GOOS
-	fmt.Fprintf(w, "Hello World from [%s] container!\n", os)
+	_, err := fmt.Fprintf(w, "Hello World from [%s] container!\n", os)
+	if err != nil {
+		return
+	}
 }
 
 func main() {
+
+	fmt.Println("\033[0;31mred\033[0m")
+	fmt.Println("\033[0;32mgreen\033[0m")
+	fmt.Println("\033[0;33myellow\033[0m")
+	fmt.Println("\033[0;34mblue\033[0m")
+	fmt.Println("\033[0;34mblue\033[0m")
 
 	logg.WithFields(logg.Fields{
 		"animal": "walrus",
