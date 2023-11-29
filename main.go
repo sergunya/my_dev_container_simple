@@ -22,3 +22,15 @@ func main() {
 	}
 
 }
+
+type IDE struct {
+	Editor   string
+	Debugger string
+	Build    string
+}
+
+func (ide IDE) getAllFunctionality() []string {
+	s := []string{ide.Editor, ide.Debugger, ide.Build}
+
+	return s
+}
