@@ -5,6 +5,8 @@ import (
 	"log"
 	"net/http"
 	"runtime"
+
+	logg "github.com/sirupsen/logrus"
 )
 
 func handle(w http.ResponseWriter, r *http.Request) {
@@ -13,6 +15,10 @@ func handle(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+
+	logg.WithFields(logg.Fields{
+		"animal": "walrus",
+	}).Info("A walrus appears")
 
 	log.Print("Trying to start server")
 
@@ -27,7 +33,7 @@ type IDE struct {
 	Editor   string
 	Debugger string
 	Build    string
-	Name 	 string
+	Name     string
 }
 
 func (ide IDE) getAllFunctionality() []string {
