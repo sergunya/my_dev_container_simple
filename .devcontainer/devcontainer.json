@@ -6,6 +6,7 @@
   ],
   "postCreateCommand": "go mod download",
   "containerEnv": {
+    "GOMODCACHE": "/tmp/modcache",
     "MY_VARIABLE": "1"
   },
   "shutdownAction": "none",
