@@ -9,6 +9,12 @@
     "GOMODCACHE": "/tmp/modcache",
     "MY_VARIABLE": "1"
   },
+  "settings": {
+    "go.toolsManagement.checkForUpdates": "local",
+    "go.useLanguageServer": true,
+    "go.gopath": "/go",
+    "go.goroot": "/usr/local/go"
+  },
   "shutdownAction": "none",
   "privileged": true,
   "capAdd": []
