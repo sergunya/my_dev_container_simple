@@ -19,6 +19,13 @@ func handle(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 
+	first := 1
+	second := 1
+	third := 1
+	four := 1
+
+	_, _, _, _ = first, second, third, four
+
 	fmt.Println("\033[0;31mred\033[0m")
 	fmt.Println("\033[0;32mgreen\033[0m")
 	fmt.Println("\033[0;33myellow\033[0m")

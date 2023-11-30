@@ -1,6 +1,8 @@
 {
   "name": "GoProject",
-  "dockerFile": "Dockerfile",
+  "dockerComposeFile": [
+    "docker-compose.yml"
+  ],
   "appPort": [
     "8000:8000"
   ],
@@ -17,5 +19,5 @@
   },
   "shutdownAction": "none",
   "privileged": true,
-  "capAdd": []
+  "service": "dev"
 }
